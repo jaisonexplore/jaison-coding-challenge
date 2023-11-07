@@ -67,13 +67,13 @@ function updateClimateData() {
 
   if(startDate !== '' && endDate !== '') {
 
-    let startDateFormatted = startDate.replace(/-/g, '') ;
-    let endDateFormatted = endDate.replace(/-/g, '') ;
+    startDateFormatted = parseInt( startDate.replace(/-/g, '') ) ;
+    endDateFormatted = parseInt( endDate.replace(/-/g, '') ) ;
 
     setTempArray([]);
 
     climateDataStatic.forEach(item => {
-      if( item.DATE >= startDateFormatted && item.DATE <= endDateFormatted) {
+      if( parseInt(item.DATE) >= startDateFormatted && parseInt(item.DATE) <= endDateFormatted) {
         tempArray.push( item );
       }
     })
@@ -184,10 +184,11 @@ const ChartTooltip = ({ active, payload, label }) => {
     <ResponsiveContainer width="100%" height={400}>
     <LineChart width={800} height={400} data={climateData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
         <XAxis dataKey="DATE_READABLE" />
+        <YAxis yAxisId={0} />
         <Tooltip />
         <CartesianGrid stroke="#f5f5f5" />
         <Line type="monotone" dataKey="TMAX" stroke="#ff7300" yAxisId={0} />
-        <Line type="monotone" dataKey="TMIN" stroke="#387908" yAxisId={1} />
+        <Line type="monotone" dataKey="TMIN" stroke="#387908" yAxisId={0} />
     </LineChart>
     </ResponsiveContainer>
 
