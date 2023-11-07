@@ -8,6 +8,7 @@ import { Table,TableHeader,TableBody,TableColumn,TableRow,TableCell } from "@nex
 import {climateDataStatic} from './constants'
 
 import { LineChart,Line,XAxis,YAxis,CartesianGrid,Tooltip,Legend,ResponsiveContainer, BarChart, Bar, Brush } from "recharts";
+import { Payload } from 'recharts/types/component/DefaultLegendContent';
 
 
 
@@ -86,9 +87,59 @@ function updateClimateData() {
 const ChartTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="custom-tooltip">
-        <p className="label">{`${label} : ${payload[0].value}`}</p>
-        <p className="label">{`${label} : ${payload[1].value}`}</p>
+      <div className="custom-tooltip bg-white p-3">
+        <p className="label">{`${label} : ${payload[0].value}`}</p>        
+
+        {payload.map((pld: Payload<ValueType, NameType>) => (
+            <div key={pld.payload.TMIN + pld.payload.TMAX} className="pb-3 text-xs">
+              <p>
+                STATION:{" "}
+                <span className="font-bold text-red-500">
+                  {pld.payload.STATION}
+                </span>
+              </p>
+              <p>
+              STATION NAME:{" "}
+                <span className="font-bold text-red-500">
+                  {pld.payload.STATION_NAME}
+                </span>
+              </p>                            
+              <p>
+                TMAX:{" "}
+                <span className="font-bold text-red-500">
+                  {pld.payload.TMAX}
+                </span>
+              </p>
+              <p>
+                TMIN:{" "}
+                <span className="font-bold text-blue-500">
+                  {pld.payload.TMIN}
+                </span>
+              </p>
+              <p>
+                ELEVATION:{" "}
+                <span className="font-bold">{pld.payload.ELEVATION}</span>
+              </p>
+              <p>
+                LATITUDE:{" "}
+                <span className="font-bold">{pld.payload.LATITUDE}</span>
+              </p>
+              <p>
+                LONGITUDE:{" "}
+                <span className="font-bold">{pld.payload.LONGITUDE}</span>
+              </p>
+              <p>
+                LONGITUDE:{" "}
+                <span className="font-bold">{pld.payload.LONGITUDE}</span>
+              </p>
+              <p>
+                PRECIPITATION:{" "}
+                <span className="font-bold">{pld.payload.PRCP}</span>
+              </p>
+            </div>
+          ))}
+        
+
       </div>
     );
   }
@@ -102,7 +153,7 @@ const ChartTooltip = ({ active, payload, label }) => {
 */
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24" style={{backgroundColor:bodyBgColor}}>
+    <main className="flex min-h-screen flex-col items-center justify-between p-2  sm:p-24" style={{backgroundColor:bodyBgColor}}>
     
     <div>
       <label>
@@ -115,7 +166,7 @@ const ChartTooltip = ({ active, payload, label }) => {
 
     <div className="grid grid-cols-4 gap-4">&nbsp;</div>
 
-    <div className="grid grid-cols-4 gap-4">
+    <div className="flex flex-wrap justify-between gap-4">
       <div>
         <label>Start Date</label>
         <input className='bg-white-200 shadow-inner rounded-l p-2 flex-1' type="date" min="2010-01-01" max="2010-01-31" value={startDate} onChange={(e) => setStartDate(e.target.value)} placeholder='Start Date' />
@@ -134,31 +185,48 @@ const ChartTooltip = ({ active, payload, label }) => {
     <div className="grid grid-cols-4 gap-4">&nbsp;</div>
 
     <h3>Line Chart 1</h3>
-
+    <ResponsiveContainer width="100%" height={400}>
     <LineChart width={800} height={400} data={climateData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
-        <XAxis dataKey="STATION" />
+        <XAxis dataKey="DATE" />
         <Tooltip />
         <CartesianGrid stroke="#f5f5f5" />
         <Line type="monotone" dataKey="TMAX" stroke="#ff7300" yAxisId={0} />
         <Line type="monotone" dataKey="TMIN" stroke="#387908" yAxisId={1} />
     </LineChart>
+    </ResponsiveContainer>
 
 
     <div className="grid grid-cols-4 gap-4">&nbsp;</div>
 
-    <h3>Line Chart 2</h3>
-
+    <h3>Line Chart 2 (TMAX)</h3>
+    <ResponsiveContainer width="100%" height={400}>
     <LineChart width={800} height={400} data={climateData}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="STATION" />
+      <XAxis dataKey="DATE" />
       <YAxis />
       <Tooltip content={<ChartTooltip />} />
       <Legend />
       <Line type="monotone" dataKey="TMAX" stroke="#8884d8" />
-      <Line type="monotone" dataKey="TMIN" stroke="#82ca9d" />
     </LineChart>
+    </ResponsiveContainer>
 
+    <div className="grid grid-cols-4 gap-4">&nbsp;</div>
+
+    <h3>Line Chart 3 (TMIN)</h3>
+
+    <ResponsiveContainer width="100%" height={400}>
+    <LineChart width={800} height={400} data={climateData}
+      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="DATE" />
+      <YAxis />
+      <Tooltip content={<ChartTooltip />} />
+      <Legend />
+      <Line type="monotone" dataKey="TMIN" stroke="#8884d8" />
+    </LineChart>
+    </ResponsiveContainer>
+    
 
     <div className="grid grid-cols-4 gap-4">&nbsp;</div>
     
