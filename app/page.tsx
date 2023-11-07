@@ -90,8 +90,8 @@ const ChartTooltip = ({ active, payload, label }) => {
       <div className="custom-tooltip bg-white p-3">
         <p className="label">{`${label} : ${payload[0].value}`}</p>        
 
-        {payload.map((pld: Payload<ValueType, NameType>) => (
-            <div key={pld.payload.TMIN + pld.payload.TMAX} className="pb-3 text-xs">
+        {payload.map((pld: Payload<ValueType, NameType>, index) => (
+            <div key={index} className="pb-3 text-xs">
               <p>
                 STATION:{" "}
                 <span className="font-bold text-red-500">
@@ -123,10 +123,6 @@ const ChartTooltip = ({ active, payload, label }) => {
               <p>
                 LATITUDE:{" "}
                 <span className="font-bold">{pld.payload.LATITUDE}</span>
-              </p>
-              <p>
-                LONGITUDE:{" "}
-                <span className="font-bold">{pld.payload.LONGITUDE}</span>
               </p>
               <p>
                 LONGITUDE:{" "}
@@ -184,10 +180,10 @@ const ChartTooltip = ({ active, payload, label }) => {
 
     <div className="grid grid-cols-4 gap-4">&nbsp;</div>
 
-    <h3>Line Chart 1</h3>
+    <h3>Line Chart 1 (TMAX & TMIN)</h3>
     <ResponsiveContainer width="100%" height={400}>
     <LineChart width={800} height={400} data={climateData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
-        <XAxis dataKey="DATE" />
+        <XAxis dataKey="DATE_READABLE" />
         <Tooltip />
         <CartesianGrid stroke="#f5f5f5" />
         <Line type="monotone" dataKey="TMAX" stroke="#ff7300" yAxisId={0} />
@@ -203,7 +199,7 @@ const ChartTooltip = ({ active, payload, label }) => {
     <LineChart width={800} height={400} data={climateData}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="DATE" />
+      <XAxis dataKey="DATE_READABLE" />
       <YAxis />
       <Tooltip content={<ChartTooltip />} />
       <Legend />
@@ -219,7 +215,7 @@ const ChartTooltip = ({ active, payload, label }) => {
     <LineChart width={800} height={400} data={climateData}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="DATE" />
+      <XAxis dataKey="DATE_READABLE" />
       <YAxis />
       <Tooltip content={<ChartTooltip />} />
       <Legend />

@@ -6,6 +6,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100101",
+      "DATE_READABLE": "2010-01-01",
       "TMAX": -178,
       "TMIN": -311,
       "PRCP": 0
@@ -17,6 +18,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100102",
+      "DATE_READABLE": "2010-01-02",
       "TMAX": -244,
       "TMIN": -322,
       "PRCP": 0
@@ -28,6 +30,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100103",
+      "DATE_READABLE": "2010-01-03",
       "TMAX": -194,
       "TMIN": -289,
       "PRCP": 0
@@ -39,6 +42,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100104",
+      "DATE_READABLE": "2010-01-04",
       "TMAX": -167,
       "TMIN": -200,
       "PRCP": 15
@@ -50,6 +54,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100105",
+      "DATE_READABLE": "2010-01-05",
       "TMAX": -133,
       "TMIN": -167,
       "PRCP": 9999
@@ -61,6 +66,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100106",
+      "DATE_READABLE": "2010-01-06",
       "TMAX": -133,
       "TMIN": -172,
       "PRCP": 9999
@@ -72,6 +78,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100107",
+      "DATE_READABLE": "2010-01-07",
       "TMAX": -150,
       "TMIN": -278,
       "PRCP": 0
@@ -83,6 +90,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100108",
+      "DATE_READABLE": "2010-01-08",
       "TMAX": -233,
       "TMIN": -328,
       "PRCP": 0
@@ -94,6 +102,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100109",
+      "DATE_READABLE": "2010-01-09",
       "TMAX": -233,
       "TMIN": -322,
       "PRCP": 0
@@ -105,6 +114,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100110",
+      "DATE_READABLE": "2010-01-10",
       "TMAX": -117,
       "TMIN": -244,
       "PRCP": 0
@@ -116,6 +126,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100111",
+      "DATE_READABLE": "2010-01-11",
       "TMAX": -67,
       "TMIN": -128,
       "PRCP": 0
@@ -127,6 +138,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100112",
+      "DATE_READABLE": "2010-01-12",
       "TMAX": -78,
       "TMIN": -122,
       "PRCP": 0
@@ -138,6 +150,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100113",
+      "DATE_READABLE": "2010-01-13",
       "TMAX": -17,
       "TMIN": -89,
       "PRCP": 0
@@ -149,6 +162,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100114",
+      "DATE_READABLE": "2010-01-14",
       "TMAX": 39,
       "TMIN": -72,
       "PRCP": 0
@@ -160,6 +174,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100115",
+      "DATE_READABLE": "2010-01-15",
       "TMAX": -67,
       "TMIN": -72,
       "PRCP": 0
@@ -171,6 +186,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100116",
+      "DATE_READABLE": "2010-01-16",
       "TMAX": 22,
       "TMIN": -50,
       "PRCP": 0
@@ -182,6 +198,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100117",
+      "DATE_READABLE": "2010-01-17",
       "TMAX": 33,
       "TMIN": -44,
       "PRCP": 0
@@ -193,6 +210,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100118",
+      "DATE_READABLE": "2010-01-18",
       "TMAX": 6,
       "TMIN": -172,
       "PRCP": 0
@@ -204,6 +222,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100119",
+      "DATE_READABLE": "2010-01-19",
       "TMAX": -56,
       "TMIN": -183,
       "PRCP": 0
@@ -215,6 +234,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100120",
+      "DATE_READABLE": "2010-01-20",
       "TMAX": -67,
       "TMIN": -139,
       "PRCP": 0
@@ -226,6 +246,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100121",
+      "DATE_READABLE": "2010-01-21",
       "TMAX": -67,
       "TMIN": -94,
       "PRCP": 25
@@ -237,6 +258,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100122",
+      "DATE_READABLE": "2010-01-22",
       "TMAX": -44,
       "TMIN": -67,
       "PRCP": 0
@@ -248,6 +270,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100123",
+      "DATE_READABLE": "2010-01-23",
       "TMAX": -6,
       "TMIN": -44,
       "PRCP": 0
@@ -259,6 +282,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100124",
+      "DATE_READABLE": "2010-01-24",
       "TMAX": 0,
       "TMIN": -11,
       "PRCP": 0
@@ -270,6 +294,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100125",
+      "DATE_READABLE": "2010-01-25",
       "TMAX": -11,
       "TMIN": -161,
       "PRCP": 0
@@ -281,6 +306,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100126",
+      "DATE_READABLE": "2010-01-26",
       "TMAX": -161,
       "TMIN": -233,
       "PRCP": 0
@@ -292,6 +318,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100127",
+      "DATE_READABLE": "2010-01-27",
       "TMAX": -167,
       "TMIN": -222,
       "PRCP": 0
@@ -303,6 +330,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100128",
+      "DATE_READABLE": "2010-01-28",
       "TMAX": -167,
       "TMIN": -283,
       "PRCP": 0
@@ -314,6 +342,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100129",
+      "DATE_READABLE": "2010-01-29",
       "TMAX": -189,
       "TMIN": -283,
       "PRCP": 0
@@ -325,6 +354,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100130",
+      "DATE_READABLE": "2010-01-30",
       "TMAX": -156,
       "TMIN": -267,
       "PRCP": 0
@@ -336,6 +366,7 @@ export const climateDataStatic = [
       "LATITUDE": 48.0355,
       "LONGITUDE": -98.01,
       "DATE": "20100131",
+      "DATE_READABLE": "2010-01-31",
       "TMAX": -150,
       "TMIN": -272,
       "PRCP": 0
